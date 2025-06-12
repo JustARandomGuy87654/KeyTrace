@@ -23,7 +23,7 @@
 - Sends data to a Telegram bot via encrypted messages.
 - Runs silently in the background.
 - Sends an initial status message with the victim’s IP when started.
-- Simple base64 encoding for easy readability.
+- Simple base64 encoding for easy readability (you must decode the keylogs)
 
 ---
 
@@ -35,25 +35,3 @@
 4. Run the script on the target machine **with permission**.
 
 ---
-
-## Educational Purpose Only
-
-This project is **not** intended for malicious use. It’s a tool for learning and understanding cybersecurity concepts.
-
-By using this software, you agree to abide by all applicable laws and ethical guidelines.
-
----
-
-## License
-
-This project is provided as-is, for educational use only. No warranty expressed or implied.
-
----
-
-## Contact
-
-If you want to discuss or learn more about cybersecurity projects, feel free to reach out.
-
----
-
-**Remember:** Use knowledge responsibly. Respect privacy and laws.
